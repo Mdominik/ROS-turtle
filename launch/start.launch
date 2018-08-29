@@ -1,0 +1,16 @@
+<launch>
+	<arg name="loop_rate" default="10" />
+	<arg name="p_gain" default="2" />
+	<arg name="i_gain" default="0.0025" />
+	<arg name="d_gain" default="0.02" />
+
+	<param name="rate" value="$(arg loop_rate)" />
+	<param name="proportional_gain" value="$(arg p_gain)" />
+	<param name="integral_gain" value="$(arg i_gain)" />
+	<param name="derivative_gain" value="$(arg d_gain)" />
+
+	<include file="$(find goal_publisher)/launch/goal_publisher.launch"/>
+	<include file="$(find dist_tracker)/launch/dist_tracker.launch"/>
+	<node pkg="dm_171915_prj" type="autonomy.py" name="autonomy" output="screen"/>
+
+</launch>

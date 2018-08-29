@@ -1,0 +1,3 @@
+rosnode kill '/autonomy'
+rosservice call /gazebo/reset_world
+
