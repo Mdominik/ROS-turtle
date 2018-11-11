@@ -101,7 +101,7 @@ No encapsulation has been used (no setters nor getters). <br/>
 
 ## Conclusion
 The bug0 algorithm works well in the given world. However, there are cases where the algorithm is not going to terminate. That's why bug1 or bug2 algorithms might be better for more complex obstacles.
-![Screenshot_from_2018-08-26_04-11-01](resources/screensho.g) <br/>
+![screenshot](resources/screensho.png) <br/>
 Gazebo simulation <br/>
 ## Sources:
 *  www.theconstructsim.com/
