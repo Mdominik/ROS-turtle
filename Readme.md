@@ -1,4 +1,4 @@
-# AMR Final Project
+# Autonomous Mobile Robots Final Project
 Author: Dominik Mazniak, 30171
 
 Course: AMR / SS2018
@@ -37,10 +37,10 @@ Laser data is divided into 5 sectors. Each sector is the minimum value within th
 
 ### Obstacle following <br/>
 The robot is following the obstacle based on the truth table below: <br/>
-![truth_table](/uploads/60edad74741634b87c4cf245461d5a0c/truth_table.png)
+![truth_table](resources/truth_table.png)
 
 ### Navigation with PID<br/>
-![go_to_point](/uploads/b4b9b7af529838ef1b6a4d118d200fb7/go_to_point.png)
+![go_to_point](resources/go_to_point.png)
 ```python
         # PID controller,
         self.integral += self.angle_diff
@@ -50,10 +50,10 @@ The robot is following the obstacle based on the truth table below: <br/>
          * self.derivative + self.ki * self.integral))
 ```
 How does the robot behave when it's close to a goal?
-![zones](/uploads/5a34705719bb3e705bca08d912d1aa5d/zones.png)
+![zones](resources/zones.png)
 
 ### Bug0 algorithm <br/>
-![bug00](/uploads/a006c73961431c6bd5129c751151306c/bug00.png) <br/>
+![bug00](resources/bug00.png) <br/>
 ```python  
             fl = self.laser_sub.sectors['front_left']
             f = self.laser_sub.sectors['front']
@@ -80,7 +80,7 @@ The **1st** one - general state machine - keeps track of the program. The states
 **3) obstacle** - avoid obstacle. Change to 2) Odom when there is nothing in front and the robot is facing the goal (+/- 60deg) <br/>
 **4) stop** - stop the program after it reached the last goal.
 
-![index](/uploads/cc167bb63f6a73bef2d5ceabc7f64b91/index.png)
+![index](resources/statemachine.png)
 
 The **2nd** one - avoiding obstacle state machine - allows the robot to follow the obstacles. The states are: <br/>
 **1) find_obstacle** - turn right when nothing detected <br/>
@@ -101,7 +101,7 @@ No encapsulation has been used (no setters nor getters). <br/>
 
 ## Conclusion
 The bug0 algorithm works well in the given world. However, there are cases where the algorithm is not going to terminate. That's why bug1 or bug2 algorithms might be better for more complex obstacles.
-![Screenshot_from_2018-08-26_04-11-01](/uploads/7d98212b41d858fb7c2863fd77f1f6b3/Screenshot_from_2018-08-26_04-11-01.png) <br/>
+![Screenshot_from_2018-08-26_04-11-01](resources/screensho.g) <br/>
 Gazebo simulation <br/>
 ## Sources:
 *  www.theconstructsim.com/
