@@ -46,7 +46,7 @@ The robot is following the obstacle based on the truth table below: <br/>
         self.integral += self.angle_diff
         self.derivative = self.angle_diff - self.prev_angle_diff
         # PID controller setting up speed
-        self.vel_pub.move_angular(100*(self.kp * self.angle_diff + self.ki \
+        self.vel_pub.move_angular(100*(self.kp * self.angle_diff + self.kd \
          * self.derivative + self.ki * self.integral))
 ```
 How does the robot behave when it's close to a goal?
