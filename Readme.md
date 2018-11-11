@@ -33,7 +33,7 @@ ROS, navigation, gazebo, laser scanner, odometry, state machine, class
 
 ### Laser data
 Laser data is divided into 5 sectors. Each sector is the minimum value within the given range of angles: <br/>
-![index1](/uploads/f32ab456a5e8b3f05fab9358b94605a6/index1.png)
+![index1](resources/sectors.png)
 
 ### Obstacle following <br/>
 The robot is following the obstacle based on the truth table below: <br/>
